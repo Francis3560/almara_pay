@@ -1,0 +1,259 @@
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+import {
+  CreditCard,
+  Smartphone,
+  Globe,
+  Landmark,
+  LayoutGrid,
+  ArrowRight,
+  Shield,
+  Wallet,
+  SmartphoneIcon,
+  Zap,
+} from "lucide-react";
+import { MainLayout } from "@/layouts/MainLayout";
+import { Button } from "@/components/ui/button";
+
+const ProductSection = ({
+  icon: Icon,
+  title,
+  tag,
+  description,
+  features,
+  imageUrl,
+  imageAlt,
+  imageSide = "right",
+}) => (
+  <section className="py-24 border-b border-border last:border-0">
+    <div className="container mx-auto px-4">
+      <div
+        className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${imageSide === "left" ? "lg:flex-row-reverse" : ""}`}
+      >
+        <div className={imageSide === "left" ? "order-2" : "order-1"}>
+          <div className="text-almara-gold font-bold text-sm tracking-widest uppercase mb-4">
+            {tag}
+          </div>
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-12 h-12 rounded-xl bg-almara-gold/10 flex items-center justify-center text-almara-gold">
+              <Icon size={24} />
+            </div>
+            <h2 className="text-4xl font-display font-extrabold text-foreground">{title}</h2>
+          </div>
+          <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
+            {description}
+          </p>
+          <ul className="space-y-4 mb-10">
+            {features.map((f, i) => (
+              <li
+                key={i}
+                className="flex items-center gap-3 text-foreground/80"
+              >
+                <div className="w-5 h-5 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-500">
+                  <Shield size={12} />
+                </div>
+                {f}
+              </li>
+            ))}
+          </ul>
+
+        </div>
+
+        <div
+          className={`order-3 ${imageSide === "left" ? "lg:order-1" : "lg:order-2"}`}
+        >
+          <div className="aspect-[4/3] bg-card border border-border rounded-[2rem] relative overflow-hidden group shadow-xl">
+            {/* Background Image */}
+            <img
+              src={imageUrl}
+              alt={imageAlt}
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            
+            {/* Gradient Overlay - Adaptive */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-background/80 via-background/20 to-transparent"></div>
+            
+            {/* Floating UI Elements */}
+            <div className="absolute top-1/4 left-1/4 w-48 h-32 bg-background/10 backdrop-blur-sm rounded-xl border border-foreground/10 transform -rotate-6 group-hover:rotate-0 transition-all duration-500"></div>
+            <div className="absolute bottom-1/4 right-1/4 w-56 h-40 bg-almara-gold/5 backdrop-blur-sm rounded-2xl border border-almara-gold/20 transform rotate-3 group-hover:rotate-0 transition-all duration-500 delay-100"></div>
+            
+            {/* Product Icon Overlay */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-almara-gold/20 backdrop-blur-md rounded-2xl border border-almara-gold/30 flex items-center justify-center">
+              <Icon className="w-10 h-10 text-almara-gold" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
+const FeatureCard = ({ icon: Icon, title, description, gradient }) => (
+  <motion.div
+    whileHover={{ y: -5 }}
+    className="bg-card border border-border rounded-2xl p-8 shadow-sm hover:border-almara-gold/40 transition-all duration-300"
+  >
+    <div className={`w-14 h-14 ${gradient} rounded-xl flex items-center justify-center mb-6`}>
+      <Icon className="w-7 h-7 text-foreground" />
+    </div>
+    <h3 className="text-xl font-display font-bold mb-4 text-foreground">{title}</h3>
+    <p className="text-muted-foreground">{description}</p>
+  </motion.div>
+);
+
+const Products = () => {
+  const navigate = useNavigate();
+  return (
+    <MainLayout>
+      {/* Hero Section */}
+      <section className="bg-background py-24 relative overflow-hidden border-b border-border">
+        <div className="container mx-auto px-4 relative z-10 text-center">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-5xl md:text-7xl font-display font-extrabold mb-8 text-foreground"
+          >
+            Enterprise Solutions for <br />
+            <span className="text-almara-gold">Borderless</span> Commerce.
+          </motion.h1>
+          <p className="max-w-2xl mx-auto text-muted-foreground text-xl">
+            We've built a full suite of payment products to help you accept
+            payments, send money, and manage your finances across the African
+            continent.
+          </p>
+        </div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,_var(--tw-gradient-from)_0%,_transparent_40%)] from-almara-gold/10 pointer-events-none"></div>
+      </section>
+
+      {/* Card Collections And Payouts */}
+      <ProductSection
+        tag="Card Payments"
+        icon={CreditCard}
+        title="Card Collections And Payouts"
+        description="Pay and move money globally using Almarapay's flexible APIs and other online payment processing solutions for card payments."
+        features={[
+          "Global card processing (Visa, Mastercard, Verve)",
+          "Direct bank debit for select markets",
+          "Automated recurring billing and subscriptions",
+          "PCIDSS Level 1 certified security",
+          "Real-time fraud detection",
+          "Multi-currency settlement"
+        ]}
+        imageUrl="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageAlt="Credit card payment processing"
+      />
+
+      {/* Mobile Money Collections And Payouts */}
+      <ProductSection
+        tag="Mobile-First"
+        icon={SmartphoneIcon}
+        title="Mobile Money Collections And Payouts"
+        imageSide="left"
+        description="With Almarapay, your customers can pay conveniently using just their mobile phones. Let customers choose from the wide range of mobile money payment options available on our platform."
+        features={[
+          "Instant C2B collections",
+          "Bulk B2C disbursements (Payouts)",
+          "Real-time transaction notifications",
+          "Webhooks for instant fulfillment",
+          "Support for M-PESA, MTN MoMo, Airtel Money",
+          "Highest success rates in the region"
+        ]}
+        imageUrl="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageAlt="Mobile money payment solutions"
+      />
+
+      {/* Alternative Payments */}
+      <ProductSection
+        tag="Custom Solutions"
+        icon={Zap}
+        title="Alternative Payments"
+        description="Looking for payment alternatives? Let us prepare a custom payment solution for you. Tailor-made payment infrastructure for unique business needs."
+        features={[
+          "Custom payment gateway development",
+          "Enterprise-grade security compliance",
+          "Seamless third-party integrations",
+          "Dedicated support and maintenance",
+          "Scalable architecture for growth",
+          "Multi-channel payment orchestration"
+        ]}
+        imageUrl="https://res.cloudinary.com/dvkt0lsqb/image/upload/v1768820559/pexels-energepic-com-27411-2988232_mhgjcw.jpg"
+        imageAlt="Alternative payment solutions"
+      />
+
+      {/* Additional Features Section */}
+      <section className="py-24 bg-secondary/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-almara-gold/10 text-almara-gold font-bold text-sm tracking-widest uppercase px-4 py-2 rounded-full mb-4">
+              <Shield size={16} />
+              Why Choose Almarapay
+            </div>
+            <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
+              Built for <span className="text-almara-gold">Scale</span> and{" "}
+              <span className="text-almara-gold">Security</span>
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Our infrastructure is designed to handle high-volume transactions while maintaining the highest security standards.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <FeatureCard
+              icon={Globe}
+              title="Global Reach"
+              description="Accept payments from customers worldwide with support for 150+ currencies and local payment methods."
+              gradient="bg-gradient-to-br from-blue-500/20 to-cyan-500/20"
+            />
+            
+            <FeatureCard
+              icon={Wallet}
+              title="Instant Settlements"
+              description="Get your funds faster with daily or weekly settlements directly to your bank account."
+              gradient="bg-gradient-to-br from-emerald-500/20 to-green-500/20"
+            />
+            
+            <FeatureCard
+              icon={Landmark}
+              title="Bank-Grade Security"
+              description="PCI DSS Level 1 certified with end-to-end encryption and advanced fraud protection."
+              gradient="bg-gradient-to-br from-purple-500/20 to-pink-500/20"
+            />
+            
+            <FeatureCard
+              icon={LayoutGrid}
+              title="Easy Integration"
+              description="Developer-friendly APIs, SDKs, and plugins for all major platforms and frameworks."
+              gradient="bg-gradient-to-br from-amber-500/20 to-orange-500/20"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Developers CTA */}
+      <section className="py-24 bg-secondary/10 border-t border-border">
+        <div className="container mx-auto px-4 text-center">
+          <div className="max-w-2xl mx-auto">
+            <h2 className="text-3xl font-display font-bold mb-6 text-foreground">
+              Ready to Integrate?
+            </h2>
+            <p className="text-muted-foreground mb-10">
+              Build custom payment flows with our developer-first documentation
+              and SDKs. Join thousands of developers building with Almarapay.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                onClick={() => navigate("/contact")}
+                className="bg-almara-gold text-almara-navy hover:bg-almara-gold/90 font-bold px-10 h-14 rounded-xl shadow-lg hover:shadow-almara-gold/20 transition-all border-0"
+              >
+                Build with Almarapay <ArrowRight className="ml-2" size={20} />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </MainLayout>
+  );
+};
+
+export default Products;

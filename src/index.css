@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 60 25% 98%;
+    --foreground: 247 81% 8%;
+    --card: 0 0% 100%;
+    --card-foreground: 247 81% 8%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 247 81% 8%;
+    --primary: 41 96% 71%;
+    --primary-foreground: 247 81% 8%;
+    --secondary: 247 5% 90%;
+    --secondary-foreground: 247 81% 8%;
+    --muted: 247 5% 90%;
+    --muted-foreground: 247 5% 40%;
+    --accent: 41 96% 71%;
+    --accent-foreground: 247 81% 8%;
+    --destructive: 11 42% 51%;
+    --destructive-foreground: 60 25% 98%;
+    --border: 247 5% 80%;
+    --input: 247 5% 80%;
+    --ring: 41 96% 71%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 247 81% 8%;
+    --foreground: 60 25% 98%;
+    --card: 247 81% 10%;
+    --card-foreground: 60 25% 98%;
+    --popover: 247 81% 10%;
+    --popover-foreground: 60 25% 98%;
+    --primary: 41 96% 71%;
+    --primary-foreground: 247 81% 8%;
+    --secondary: 247 30% 20%;
+    --secondary-foreground: 60 25% 98%;
+    --muted: 247 30% 20%;
+    --muted-foreground: 247 5% 70%;
+    --accent: 41 96% 71%;
+    --accent-foreground: 247 81% 8%;
+    --destructive: 11 42% 51%;
+    --destructive-foreground: 60 25% 98%;
+    --border: 247 30% 20%;
+    --input: 247 30% 20%;
+    --ring: 41 96% 71%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
+  }
+}
+
+@layer utilities {
+  .animate-ping-slow {
+    animation: ping 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
+
+@keyframes ping {
+  75%,
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
+}
