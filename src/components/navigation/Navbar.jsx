@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Menu, X, Sun, Moon, Phone } from "lucide-react";
+import { Menu, X, Sun, Moon, ChevronDown, ArrowRight } from "lucide-react";
 import { Logo } from "../Logo";
 import { Button } from "../ui/button";
 import { useTheme } from "../theme-provider";
@@ -10,6 +10,8 @@ import { motion, AnimatePresence } from "framer-motion";
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
+  const [mobileExpanded, setMobileExpanded] = useState(null);
   const location = useLocation();
   const navigate = useNavigate();
   const { theme, setTheme } = useTheme();
@@ -37,14 +39,35 @@ export const Navbar = () => {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
-    { name: "Our Products", path: "/products" },
-    { name: "Services", path: "/services" },
+    { 
+      name: "Our Products", 
+      path: "/products",
+      subLinks: [
+        { name: "Crypto ↔ Fiat Ramp", path: "/products/crypto-fiat-ramp" },
+        { name: "Agent-Assisted OTC", path: "/products/agent-assisted-otc" },
+        { name: "SME & Merchant OTC", path: "/products/sme-merchant-otc" },
+      ]
+    },
+    { 
+      name: "Services", 
+      path: "/services",
+      subLinks: [
+        { name: "Remittance Settlement", path: "/services/remittance-settlement" },
+        { name: "Treasury OTC Desk", path: "/services/treasury-otc-desk" },
+        { name: "Compliance Model", path: "/services/compliance-model" },
+      ]
+    },
     { name: "Blog", path: "/blog" },
   ];
 
   const handleNavClick = (path) => {
     navigate(path);
     setIsOpen(false);
+    setActiveDropdown(null);
+  };
+
+  const toggleMobileExpanded = (name) => {
+    setMobileExpanded(mobileExpanded === name ? null : name);
   };
 
   return (
@@ -65,19 +88,50 @@ export const Navbar = () => {
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center space-x-1">
             {navLinks.map((link) => (
-              <Button
-                key={link.name}
-                variant="ghost"
-                onClick={() => handleNavClick(link.path)}
-                className={cn(
-                  "font-medium px-4 py-2 rounded-full transition-all duration-300 hover:scale-105 text-sm",
-                  location.pathname === link.path 
-                    ? "bg-primary/20 text-primary hover:bg-primary/30" 
-                    : "text-foreground/80 hover:text-foreground hover:bg-secondary"
-                )}
+              <div 
+                key={link.name} 
+                className="relative group"
+                onMouseEnter={() => setActiveDropdown(link.name)}
+                onMouseLeave={() => setActiveDropdown(null)}
               >
-                {link.name}
-              </Button>
+                <Button
+                  variant="ghost"
+                  onClick={() => !link.subLinks && handleNavClick(link.path)}
+                  className={cn(
+                    "font-medium px-4 py-2 rounded-full transition-all duration-300 hover:scale-105 text-sm flex items-center gap-1",
+                    location.pathname === link.path || (link.subLinks?.some(sub => location.pathname === sub.path))
+                      ? "bg-primary/20 text-primary hover:bg-primary/30" 
+                      : "text-foreground/80 hover:text-foreground hover:bg-secondary"
+                  )}
+                >
+                  {link.name}
+                  {link.subLinks && <ChevronDown size={14} className={cn("transition-transform duration-300", activeDropdown === link.name ? "rotate-180" : "")} />}
+                </Button>
+
+                {/* Dropdown Menu */}
+                <AnimatePresence>
+                  {link.subLinks && activeDropdown === link.name && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute top-full left-0 mt-1 w-64 bg-card border border-border rounded-2xl shadow-2xl overflow-hidden p-2"
+                    >
+                      {link.subLinks.map((sub) => (
+                        <button
+                          key={sub.name}
+                          onClick={() => handleNavClick(sub.path)}
+                          className="w-full text-left px-4 py-3 rounded-xl hover:bg-secondary transition-colors text-sm font-medium flex items-center justify-between group/item"
+                        >
+                          {sub.name}
+                          <ArrowRight size={14} className="opacity-0 -translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all" />
+                        </button>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
             ))}
           </nav>
 
@@ -128,20 +182,34 @@ export const Navbar = () => {
               <div
                 className={cn(
                   "py-4 space-y-2 border-t rounded-b-2xl",
-                  scrolled
-                    ? "bg-background/95 border-border backdrop-blur-lg"
-                    : "bg-background/95 border-border backdrop-blur-lg"
+                  "bg-background/95 border-border backdrop-blur-lg"
                 )}
               >
                 {navLinks.map((link) => (
-                  <Button
-                    key={link.name}
-                    variant="ghost"
-                    onClick={() => handleNavClick(link.path)}
-                    className="w-full justify-start px-4 py-3 text-foreground/90 hover:text-foreground hover:bg-secondary font-normal transition-all duration-200 rounded-lg"
-                  >
-                    {link.name}
-                  </Button>
+                  <div key={link.name}>
+                    <Button
+                      variant="ghost"
+                      onClick={() => link.subLinks ? toggleMobileExpanded(link.name) : handleNavClick(link.path)}
+                      className="w-full justify-between px-4 py-3 text-foreground/90 hover:text-foreground hover:bg-secondary font-normal transition-all duration-200 rounded-lg"
+                    >
+                      {link.name}
+                      {link.subLinks && <ChevronDown size={16} className={cn("transition-transform", mobileExpanded === link.name ? "rotate-180" : "")} />}
+                    </Button>
+                    
+                    {link.subLinks && mobileExpanded === link.name && (
+                      <div className="pl-6 space-y-1 mt-1 pb-2">
+                        {link.subLinks.map((sub) => (
+                          <button
+                            key={sub.name}
+                            onClick={() => handleNavClick(sub.path)}
+                            className="w-full text-left px-4 py-2 rounded-lg hover:bg-secondary transition-colors text-sm text-muted-foreground hover:text-foreground"
+                          >
+                            {sub.name}
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 ))}
                 
                 <div className="px-4 pt-2 space-y-3">

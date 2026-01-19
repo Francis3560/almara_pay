@@ -35,18 +35,6 @@ const CodeSnippet = ({ code, language = "javascript" }) => (
 
 const Developers = () => {
   const navigate = useNavigate();
-  const sampleCode = `const almara = require('almara-pay-node')('sk_live_...');
-
-// Create a payment request
-const payment = await almara.charges.create({
-  amount: 50000, // in ksh
-  currency: 'KES',
-  email: 'customer@example.com',
-  callback_url: 'https://your-site.com/callback',
-  metadata: { order_id: '12345' }
-});
-
-console.log(payment.checkout_url);`;
 
   return (
     <MainLayout>
@@ -54,24 +42,23 @@ console.log(payment.checkout_url);`;
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-widest mb-6">
-                Developer Hub
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-almara-gold/10 border border-almara-gold/20 text-almara-gold text-xs font-bold uppercase tracking-widest mb-6">
+                Institutional Services
               </div>
               <h1 className="text-5xl md:text-7xl font-display font-extrabold mb-8 text-foreground">
-                Built by Developers, <br />
-                <span className="text-almara-gold">for Developers.</span>
+                Settlement Rails for <br />
+                <span className="text-almara-gold">Digital Assets.</span>
               </h1>
               <p className="text-xl text-muted-foreground mb-10 leading-relaxed max-w-xl">
-                Integrate robust payment capabilities into your application with
-                just a few lines of code. Our APIs are clean, predictable, and
-                designed for scale.
+                AlmaraPay provides institutional-grade liquidity and settlement infrastructure, 
+                bridging the gap between traditional fiat systems and the digital economy.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button 
                   onClick={() => navigate("/contact")}
                   className="bg-almara-gold text-almara-navy hover:bg-almara-gold/90 font-bold px-8 h-14 rounded-xl border-0"
                 >
-                  Contact Sales Now
+                  Contact Our Desk
                 </Button>
               </div>
             </div>
@@ -80,37 +67,58 @@ console.log(payment.checkout_url);`;
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
+              className="bg-card border border-border rounded-[2.5rem] p-12 relative overflow-hidden shadow-2xl"
             >
-              <CodeSnippet code={sampleCode} />
+              <div className="relative z-10">
+                <div className="w-16 h-16 rounded-2xl bg-almara-gold/10 flex items-center justify-center text-almara-gold mb-8">
+                  <Globe size={32} />
+                </div>
+                <h3 className="text-3xl font-display font-bold mb-6 text-foreground">Global Liquidity, Local Settlement</h3>
+                <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+                  Access deep liquidity pools through our regulated OTC desk while settling instantly 
+                  in local currencies via AlmaraPay's established payment rails.
+                </p>
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="bg-background/50 p-4 rounded-xl border border-border">
+                    <div className="text-almara-gold font-bold mb-1">99.9%</div>
+                    <div className="text-xs uppercase tracking-tighter text-muted-foreground">Price Certainty</div>
+                  </div>
+                  <div className="bg-background/50 p-4 rounded-xl border border-border">
+                    <div className="text-almara-gold font-bold mb-1">20+</div>
+                    <div className="text-xs uppercase tracking-tighter text-muted-foreground">Markets Supported</div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute top-0 right-0 w-64 h-64 bg-almara-gold/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* API Features Grids */}
+      {/* API Features Grids repurposed as Core Pillars */}
       <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 icon: Zap,
-                title: "Restful API",
-                desc: "Standard JSON requests and responses that any client can understand.",
+                title: "Fast Settlement",
+                desc: "Average transaction completion time in minutes across all supported regions.",
               },
               {
                 icon: ShieldCheck,
-                title: "Webhooks",
-                desc: "Get real-time updates on transaction status changes automatically.",
+                title: "Deep Liquidity",
+                desc: "Institutional partnerships ensure minimal slippage even for high-value orders.",
               },
               {
-                icon: Blocks,
-                title: "SDK Library",
-                desc: "Official libraries for Node.js, Python, PHP, Ruby, and Go.",
+                icon: Smartphone,
+                title: "APM Integration",
+                desc: "Seamlessly move between Mobile Money and Digital Asset rails.",
               },
               {
-                icon: Cpu,
-                title: "Sandbox Mode",
-                desc: "Test your entire integration in a risk-free environment before going live.",
+                icon: Building,
+                title: "SME Focused",
+                desc: "Optimized for the needs of importers, exporters, and freelancers.",
               },
             ].map((item, i) => (
               <div
@@ -135,48 +143,44 @@ console.log(payment.checkout_url);`;
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto mb-20">
             <h2 className="text-4xl md:text-5xl font-display font-extrabold mb-8 text-foreground">
-              Our <span className="text-almara-gold">Services</span>
+              Comprehensive <span className="text-almara-gold">OTC Services</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Our promise is Simple, Seamless, Secure and Fast transactions, always. Here is how we achieve it. 
-              With a focus on innovation and customer satisfaction, we strive to provide cutting-edge solutions 
-              that streamline financial operations. Our services are designed to cater to a diverse range of 
-              business needs, ensuring reliability, scalability, and top-notch security at every step. 
-              Whether you're a small business or a large enterprise, we have the right tools and expertise 
-              to help you succeed in today's competitive market.
+              AlmaraPay provides a suite of services designed for the modern African digital economy, 
+              ensuring price certainty, institutional security, and regulatory transparency.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: "Payment Gateway",
-                desc: "Our robust payment gateway seamlessly integrates with your website or application, providing a hassle-free checkout experience for your customers.",
-                icon: Laptop,
+                title: "Remittance Settlement",
+                desc: "Optimizing cross-border flows for licensed remittance providers with instant digital asset backends.",
+                icon: Globe,
               },
               {
-                title: "Custom Solutions",
-                desc: "We understand that every business is unique. Our team can work with you to create custom payment solutions tailored to your specific requirements.",
-                icon: Code2,
+                title: "Treasury OTC Desk",
+                desc: "High-value execution for corporate entities and institutional partners with dedicated account management.",
+                icon: Building,
               },
               {
-                title: "Collections",
-                desc: "AlmaraPay offers a comprehensive suite of merchant services, including fraud prevention, recurring billing, and reporting tools, designed to optimize your payment processing.",
+                title: "Compliance Model",
+                desc: "A risk-based framework for KYC, KYB, and AML screening integrated into every settlement flow.",
+                icon: ShieldCheck,
+              },
+              {
+                title: "Liquidity Provision",
+                desc: "Consistent market liquidity for partners requiring digital asset on-ramp and off-ramp capabilities.",
                 icon: Zap,
               },
               {
-                title: "Settlements",
-                desc: "Withdraw your funds to your preferred accounts: Mobile money & Bank Accounts.",
-                icon: FileText,
+                title: "Agent Settlement",
+                desc: "Physical infrastructure support for cash-to-digital conversions via verified agent terminals.",
+                icon: Laptop,
               },
               {
-                title: "Bank Transfer",
-                desc: "With AlmaraPay, you can send money directly to bank accounts i.e. We support Pesalink, RTGS, EFT etc.",
-                icon: Blocks,
-              },
-              {
-                title: "Utility Payments",
-                desc: "AlmaraPay understands that Bills are a part of a business and we are here to help with that. You can pay for your utility bills such as Electricity, Water, Internet and even Statutory Bills.",
+                title: "Merchant APIs",
+                desc: "Automated settlements for e-commerce platforms and merchants accepting digital asset payments.",
                 icon: Cpu,
               },
             ].map((service, i) => (
@@ -188,7 +192,7 @@ console.log(payment.checkout_url);`;
                 transition={{ delay: i * 0.1 }}
                 className="group p-10 rounded-3xl bg-card border border-border hover:border-almara-gold/40 transition-all duration-500 text-center shadow-lg hover:shadow-almara-gold/5"
               >
-                <div className="w-16 h-16 rounded-2xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 mx-auto mb-8 group-hover:scale-110 transition-transform duration-500">
+                <div className="w-16 h-16 rounded-2xl bg-almara-gold/10 flex items-center justify-center text-almara-gold mx-auto mb-8 group-hover:scale-110 transition-transform duration-500">
                   <service.icon size={32} />
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-foreground">
@@ -203,11 +207,11 @@ console.log(payment.checkout_url);`;
         </div>
       </section>
 
-      {/* Integration Workflow */}
+      {/* Integration Workflow repurposed for Onboarding */}
       <section className="py-24 bg-secondary/30">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-display font-bold text-center mb-20 text-foreground">
-            Integration <span className="text-almara-gold">Workflow</span>
+            Onboarding <span className="text-almara-gold">Process</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative text-foreground">
             {/* Connector Line */}
@@ -216,18 +220,18 @@ console.log(payment.checkout_url);`;
             {[
               {
                 step: "01",
-                title: "Get Keys",
-                desc: "Register on our dashboard to receive your API keys immediately.",
+                title: "KYC/KYB Verification",
+                desc: "Submit your institutional or individual documentation for compliance screening.",
               },
               {
                 step: "02",
-                title: "Integrate",
-                desc: "Use our SDKs or direct HTTP requests to trigger payment flows.",
+                title: "Liquidity Access",
+                desc: "Get access to our live OTC rates and dedicated settlement channels.",
               },
               {
                 step: "03",
-                title: "Go Live",
-                desc: "Switch to live keys and start collecting real payments in minutes.",
+                title: "Execute & Settle",
+                desc: "Initiate your transaction and receive settlement in your preferred local currency.",
               },
             ].map((item, i) => (
               <div key={i} className="relative z-10 text-center">
@@ -244,24 +248,24 @@ console.log(payment.checkout_url);`;
         </div>
       </section>
 
-      {/* Security note */}
+      {/* Integrity note */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto rounded-3xl p-10 border border-emerald-500/20 bg-emerald-500/5 flex flex-col md:flex-row gap-10 items-center">
-            <div className="shrink-0 w-20 h-20 rounded-2xl bg-emerald-500/10 flex items-center justify-center text-emerald-500">
+          <div className="max-w-4xl mx-auto rounded-3xl p-10 border border-almara-gold/20 bg-almara-gold/5 flex flex-col md:flex-row gap-10 items-center">
+            <div className="shrink-0 w-20 h-20 rounded-2xl bg-almara-gold/10 flex items-center justify-center text-almara-gold">
               <ShieldCheck size={40} />
             </div>
             <div>
               <h3 className="text-2xl font-bold mb-4 text-foreground">
-                Secured by PCIDSS Level 1
+                Institutional Integrity & Compliance
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                We handle all sensitive card data in our secure environment.
-                Your application never touches the actual card details, reducing
-                your compliance burden and keeping your users safe.
+                AlmaraPay operates as a pure settlement rail, not a speculative exchange. 
+                We adhere to strict market-by-market regulatory alignment and integrity standards. 
+                Your digital asset transactions are handled with the highest level of risk management.
               </p>
-              <div className="mt-6 flex items-center gap-4 text-emerald-500 font-bold group cursor-pointer">
-                See Our Compliance Standards{" "}
+              <div className="mt-6 flex items-center gap-4 text-almara-gold font-bold group cursor-pointer" onClick={() => navigate("/contact")}>
+                Inquire About Compliance Standards{" "}
                 <ArrowRight
                   size={18}
                   className="group-hover:translate-x-1 transition-transform"
@@ -274,5 +278,13 @@ console.log(payment.checkout_url);`;
     </MainLayout>
   );
 };
+
+const Globe = ({ size }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20"></path><path d="M2 12h20"></path></svg>
+);
+
+const Smartphone = ({ size }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect><path d="M12 18h.01"></path></svg>
+);
 
 export default Developers;

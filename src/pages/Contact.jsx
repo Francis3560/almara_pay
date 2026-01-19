@@ -38,8 +38,8 @@ const Contact = () => {
               </span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Whether you’re a scaling startup or an established enterprise, our
-              team is ready to help you optimize your payment cycles.
+              Whether you’re a scaling business, an institutional seeker of liquidity, or a merchant 
+              facilitating digital asset flows, our OTC desk is ready to assist.
             </p>
           </div>
 
@@ -48,42 +48,42 @@ const Contact = () => {
             <div className="lg:col-span-5 space-y-6">
               <ContactInfo
                 icon={Mail}
-                title="General Inquiries"
+                title="OTC Desk Inquiries"
                 content="hello@almarapay.com"
                 link="mailto:hello@almarapay.com"
               />
               <ContactInfo
                 icon={MessageCircle}
-                title="Sales & Partners"
+                title="Institutional Partners"
                 content="sales@almarapay.com"
                 link="mailto:sales@almarapay.com"
               />
               <ContactInfo
                 icon={Phone}
-                title="24/7 Support"
+                title="Trade Support"
                 content="+254 700 000 000"
                 link="tel:+254700000000"
               />
               <ContactInfo
                 icon={MapPin}
-                title="Headquarters"
+                title="Strategic Hub"
                 content="Westlands Business Park, Nairobi, Kenya"
               />
 
               <div className="mt-12 p-8 rounded-3xl bg-almara-gold text-almara-navy relative overflow-hidden group">
                 <div className="relative z-10">
                   <h3 className="text-2xl font-bold mb-4">
-                    Enterprise Support
+                    Treasury Desk
                   </h3>
                   <p className="font-medium mb-6 opacity-80">
-                    Looking for custom pricing or large-scale integrations?
-                    Schedule a 1:1 call with our specialist.
+                    Looking for custom pricing for high-volume orders?
+                    Schedule a 1:1 call with our liquidity specialist.
                   </p>
                   <Button
                     variant="secondary"
                     className="bg-almara-navy text-white hover:bg-almara-navy/90 font-bold border-none transition-transform group-hover:scale-105"
                   >
-                    Book a Demo
+                    Schedule Trade Call
                   </Button>
                 </div>
                 <Globe
@@ -125,7 +125,7 @@ const Contact = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-muted-foreground ml-1">
-                        Company
+                        Company / Entity
                       </label>
                       <input
                         type="text"
@@ -135,12 +135,15 @@ const Contact = () => {
                     </div>
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-muted-foreground ml-1">
-                        Region
+                        Primary Market
                       </label>
                       <select className="w-full h-14 bg-secondary/50 border border-border rounded-2xl px-6 appearance-none focus:outline-none focus:border-almara-gold transition-all text-foreground">
-                        <option>East Africa</option>
-                        <option>West Africa</option>
-                        <option>Southern Africa</option>
+                        <option>Kenya</option>
+                        <option>Uganda</option>
+                        <option>Tanzania</option>
+                        <option>Rwanda</option>
+                        <option>Nigeria</option>
+                        <option>Ghana</option>
                         <option>Other</option>
                       </select>
                     </div>
@@ -152,10 +155,11 @@ const Contact = () => {
                     </label>
                     <div className="flex flex-wrap gap-3">
                       {[
-                        "Collections",
-                        "Payouts",
-                        "Cross-Border",
-                        "API/Integration",
+                        "OTC On-Ramp",
+                        "OTC Off-Ramp",
+                        "Treasury Desk",
+                        "Remittance Settlement",
+                        "Compliance/KYB",
                         "Other",
                       ].map((tag) => (
                         <button

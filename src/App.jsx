@@ -13,6 +13,12 @@ import Developers from "./pages/Developers";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
+import CryptoFiatRamp from "./pages/solutions/CryptoFiatRamp";
+import AgentAssistedOTC from "./pages/solutions/AgentAssistedOTC";
+import SMEMerchantOTC from "./pages/solutions/SMEMerchantOTC";
+import RemittanceSettlement from "./pages/solutions/RemittanceSettlement";
+import TreasuryOTCDesk from "./pages/solutions/TreasuryOTCDesk";
+import ComplianceModel from "./pages/solutions/ComplianceModel";
 import "./index.css";
 
 // Scroll to top on route change
@@ -58,7 +64,13 @@ const AppContent = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/products/crypto-fiat-ramp" element={<CryptoFiatRamp />} />
+          <Route path="/products/agent-assisted-otc" element={<AgentAssistedOTC />} />
+          <Route path="/products/sme-merchant-otc" element={<SMEMerchantOTC />} />
           <Route path="/services" element={<Developers />} />
+          <Route path="/services/remittance-settlement" element={<RemittanceSettlement />} />
+          <Route path="/services/treasury-otc-desk" element={<TreasuryOTCDesk />} />
+          <Route path="/services/compliance-model" element={<ComplianceModel />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />

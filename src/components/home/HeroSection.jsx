@@ -16,12 +16,12 @@ const slides = [
   {
     heading: (
       <>
-        Enabling Effortless Transactions <br />
-        <span className="text-almara-gold italic">in the Digital Era</span>
+        OTC Digital Asset <br />
+        <span className="text-almara-gold italic">Exchange & Settlement Services</span>
       </>
     ),
     subheading:
-      "AlmaraPay is a pioneering payment gateway company revolutionizing the way businesses and consumers conduct digital transactions.",
+      "AlmaraPay offers agent-assisted Over-The-Counter (OTC) digital asset services that enable individuals and businesses to seamlessly convert local currency to digital assets and back, using trusted payment rails across Africa.",
     bgDark:
       "https://res.cloudinary.com/dvkt0lsqb/image/upload/v1768812003/Almara_hvbvr4.png",
     bgLight:
@@ -30,12 +30,12 @@ const slides = [
   {
     heading: (
       <>
-        Payments for <br />
-        <span className="text-almara-gold">Africa's Boldest.</span>
+        Crypto ↔ Fiat <br />
+        <span className="text-almara-gold">On-Ramp & Off-Ramp.</span>
       </>
     ),
     subheading:
-      "One API to collect payments, manage payouts, and scale across the continent. Secure, reliable, and built for scale.",
+      "Buy and sell digital assets via Regulated Payment Rails. Secure, reliable, and built for scale with 99.9% uptime and bank-grade security.",
     bgDark:
       "https://res.cloudinary.com/dvkt0lsqb/image/upload/v1768804322/Paystack_with_no_logo_mslob3.png",
     bgLight:
@@ -85,7 +85,7 @@ const Hero = () => {
       </div>
 
       {/* Content - Left Aligned with Carousel Transitions */}
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col">
+      <div className="relative z-10 w-full pl-4 sm:pl-8 lg:pl-12 flex flex-col">
         <div className="max-w-3xl">
           {/* Trust Badge */}
           <div className="flex items-center gap-2 mb-6">
@@ -185,17 +185,17 @@ const Hero = () => {
 
 const PaymentMethods = () => (
   <div className="py-12 border-y border-border bg-secondary/30">
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-4 text-center md:text-left">
       <p className="text-center text-xs font-bold uppercase tracking-[0.3em] text-muted-foreground/60 mb-8">
-        Supported Implementation Methods
+        OTC Settlement & Rail Infrastructure
       </p>
       <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
         {[
           "Mobile Money",
-          "Bank Cards",
-          "USSD",
-          "E-Wallets",
           "Bank Transfer",
+          "Agent Network",
+          "Digital Assets (USDT/USDC)",
+          "Treasury Desk",
         ].map((m) => (
           <div
             key={m}

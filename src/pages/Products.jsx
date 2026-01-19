@@ -114,71 +114,70 @@ const Products = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-display font-extrabold mb-8 text-foreground"
           >
-            Enterprise Solutions for <br />
-            <span className="text-almara-gold">Borderless</span> Commerce.
+            Digital Asset Solutions for <br />
+            <span className="text-almara-gold">Africa's</span> Economy.
           </motion.h1>
           <p className="max-w-2xl mx-auto text-muted-foreground text-xl">
-            We've built a full suite of payment products to help you accept
-            payments, send money, and manage your finances across the African
-            continent.
+            AlmaraPay offers Over-The-Counter (OTC) digital asset services that enable 
+            seamless conversion between local currency and digital assets.
           </p>
         </div>
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,_var(--tw-gradient-from)_0%,_transparent_40%)] from-almara-gold/10 pointer-events-none"></div>
       </section>
 
-      {/* Card Collections And Payouts */}
+      {/* Crypto-Fiat Ramp */}
       <ProductSection
-        tag="Card Payments"
-        icon={CreditCard}
-        title="Card Collections And Payouts"
-        description="Pay and move money globally using Almarapay's flexible APIs and other online payment processing solutions for card payments."
+        tag="On-Ramp & Off-Ramp"
+        icon={RefreshCw}
+        title="Crypto ↔ Fiat OTC Solutions"
+        description="Enable your customers to buy and sell digital assets like USDT using mobile money, bank transfers, and approved agent channels with guaranteed price certainty."
         features={[
-          "Global card processing (Visa, Mastercard, Verve)",
-          "Direct bank debit for select markets",
-          "Automated recurring billing and subscriptions",
-          "PCIDSS Level 1 certified security",
-          "Real-time fraud detection",
-          "Multi-currency settlement"
+          "Buy USDT with Mobile Money & Bank Transfer",
+          "Sell USDT for instant local currency payout",
+          "Real-time quoted rates with zero slippage",
+          "Approved agent channels for physical cash in/out",
+          "Settlement to bank accounts across 20+ markets",
+          "Risk-based KYC/KYB integrated flows"
+        ]}
+        imageUrl="https://images.unsplash.com/photo-1621416894569-0f39ed31d247?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageAlt="Digital asset exchange"
+      />
+
+      {/* Agent Assisted */}
+      <ProductSection
+        tag="Human-Assisted"
+        icon={Users}
+        title="Agent-Assisted OTC Transactions"
+        imageSide="left"
+        description="Building trust in emerging markets through a network of verified agents who facilitate transaction initiation, verification, and user education."
+        features={[
+          "Assisted transaction initiation and execution",
+          "Human-verified KYC and documentation",
+          "Face-to-face education for new digital asset users",
+          "Support for markets with low self-serve adoption",
+          "Rigorous agent vetting and monitoring",
+          "Offline-to-online digital finance bridge"
         ]}
         imageUrl="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
-        imageAlt="Credit card payment processing"
+        imageAlt="Agent assisted transactions"
       />
 
-      {/* Mobile Money Collections And Payouts */}
+      {/* SME & Merchant */}
       <ProductSection
-        tag="Mobile-First"
-        icon={SmartphoneIcon}
-        title="Mobile Money Collections And Payouts"
-        imageSide="left"
-        description="With Almarapay, your customers can pay conveniently using just their mobile phones. Let customers choose from the wide range of mobile money payment options available on our platform."
+        tag="Enterprise"
+        icon={Building}
+        title="SME & Merchant OTC Services"
+        description="Powerful liquidity management for businesses handling cross-border settlements, imports, and remote work payments."
         features={[
-          "Instant C2B collections",
-          "Bulk B2C disbursements (Payouts)",
-          "Real-time transaction notifications",
-          "Webhooks for instant fulfillment",
-          "Support for M-PESA, MTN MoMo, Airtel Money",
-          "Highest success rates in the region"
+          "Bulk local-to-USDT conversions for imports",
+          "Receive international payments and cash out locally",
+          "Liquidity management for freelancing platforms",
+          "Reduced exposure to public exchange volatility",
+          "Detailed corporate reporting and auditing",
+          "Preferred rates for high-volume transactions"
         ]}
-        imageUrl="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
-        imageAlt="Mobile money payment solutions"
-      />
-
-      {/* Alternative Payments */}
-      <ProductSection
-        tag="Custom Solutions"
-        icon={Zap}
-        title="Alternative Payments"
-        description="Looking for payment alternatives? Let us prepare a custom payment solution for you. Tailor-made payment infrastructure for unique business needs."
-        features={[
-          "Custom payment gateway development",
-          "Enterprise-grade security compliance",
-          "Seamless third-party integrations",
-          "Dedicated support and maintenance",
-          "Scalable architecture for growth",
-          "Multi-channel payment orchestration"
-        ]}
-        imageUrl="https://res.cloudinary.com/dvkt0lsqb/image/upload/v1768820559/pexels-energepic-com-27411-2988232_mhgjcw.jpg"
-        imageAlt="Alternative payment solutions"
+        imageUrl="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1415&q=80"
+        imageAlt="Business liquidity management"
       />
 
       {/* Additional Features Section */}
@@ -187,66 +186,61 @@ const Products = () => {
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-almara-gold/10 text-almara-gold font-bold text-sm tracking-widest uppercase px-4 py-2 rounded-full mb-4">
               <Shield size={16} />
-              Why Choose Almarapay
+              Strategic OTC Value
             </div>
             <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
-              Built for <span className="text-almara-gold">Scale</span> and{" "}
-              <span className="text-almara-gold">Security</span>
+              Regulator-Friendly <span className="text-almara-gold">Settlement</span> Infrastructure
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Our infrastructure is designed to handle high-volume transactions while maintaining the highest security standards.
-            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <FeatureCard
-              icon={Globe}
-              title="Global Reach"
-              description="Accept payments from customers worldwide with support for 150+ currencies and local payment methods."
+              icon={Zap}
+              title="APM Footprint"
+              description="Extending AlmaraPay's mobile money footprint through digital asset rail integration."
               gradient="bg-gradient-to-br from-blue-500/20 to-cyan-500/20"
             />
             
             <FeatureCard
-              icon={Wallet}
-              title="Instant Settlements"
-              description="Get your funds faster with daily or weekly settlements directly to your bank account."
+              icon={Globe}
+              title="Cross-Border Flows"
+              description="Monetizing crypto-linked flows while ensuring compliance and transparency."
               gradient="bg-gradient-to-br from-emerald-500/20 to-green-500/20"
             />
             
             <FeatureCard
-              icon={Landmark}
-              title="Bank-Grade Security"
-              description="PCI DSS Level 1 certified with end-to-end encryption and advanced fraud protection."
+              icon={Users}
+              title="Financial Inclusion"
+              description="Supporting SME growth by providing access to global digital liquidity."
               gradient="bg-gradient-to-br from-purple-500/20 to-pink-500/20"
             />
             
             <FeatureCard
-              icon={LayoutGrid}
-              title="Easy Integration"
-              description="Developer-friendly APIs, SDKs, and plugins for all major platforms and frameworks."
+              icon={Shield}
+              title="Non-Exchange Positioning"
+              description="Built as a settlement solution, not a speculative platform, ensuring regulatory trust."
               gradient="bg-gradient-to-br from-amber-500/20 to-orange-500/20"
             />
           </div>
         </div>
       </section>
 
-      {/* Developers CTA */}
+      {/* Contact Sales CTA */}
       <section className="py-24 bg-secondary/10 border-t border-border">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-2xl mx-auto">
             <h2 className="text-3xl font-display font-bold mb-6 text-foreground">
-              Ready to Integrate?
+              Ready to execute your first transaction?
             </h2>
-            <p className="text-muted-foreground mb-10">
-              Build custom payment flows with our developer-first documentation
-              and SDKs. Join thousands of developers building with Almarapay.
+            <p className="text-muted-foreground mb-10 text-lg">
+              Contact our OTC desk to get verified and start convertion local currency to digital assets today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 onClick={() => navigate("/contact")}
-                className="bg-almara-gold text-almara-navy hover:bg-almara-gold/90 font-bold px-10 h-14 rounded-xl shadow-lg hover:shadow-almara-gold/20 transition-all border-0"
+                className="bg-almara-gold text-almara-navy hover:bg-almara-gold/90 font-bold px-10 h-14 rounded-xl shadow-lg transition-all border-0"
               >
-                Build with Almarapay <ArrowRight className="ml-2" size={20} />
+                Get Started with OTC <ArrowRight className="ml-2" size={20} />
               </Button>
             </div>
           </div>
@@ -255,5 +249,14 @@ const Products = () => {
     </MainLayout>
   );
 };
+
+// Custom icons
+const RefreshCw = ({ size }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 2v6h-6"></path><path d="M3 12a9 9 0 0 1 15-6.7L21 8"></path><path d="M3 22v-6h6"></path><path d="M21 12a9 9 0 0 1-15 6.7L3 16"></path></svg>
+);
+
+const Building = ({ size }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg>
+);
 
 export default Products;
