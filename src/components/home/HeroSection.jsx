@@ -128,7 +128,7 @@ const Hero = () => {
                   </div>
                   <div className="flex items-center gap-2 bg-secondary/20 backdrop-blur-sm px-4 py-2 rounded-full border border-border">
                     <Clock className="w-4 h-4 text-almara-gold" />
-                    <span className="text-sm font-medium">99.9% Up-time</span>
+                    <span className="text-sm font-medium">97.9% Up-time</span>
                   </div>
                 </div>
               </div>
