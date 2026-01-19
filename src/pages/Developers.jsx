@@ -38,253 +38,298 @@ const Developers = () => {
 
   return (
     <MainLayout>
-      <section className="py-24 bg-gradient-to-b from-secondary/50 via-background to-background">
+      <section className="py-24 bg-gradient-to-b from-secondary/50 via-background to-background border-b border-border">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-almara-gold/10 border border-almara-gold/20 text-almara-gold text-xs font-bold uppercase tracking-widest mb-6">
-                Institutional Services
-              </div>
-              <h1 className="text-5xl md:text-7xl font-display font-extrabold mb-8 text-foreground">
-                Settlement Rails for <br />
-                <span className="text-almara-gold">Digital Assets.</span>
-              </h1>
-              <p className="text-xl text-muted-foreground mb-10 leading-relaxed max-w-xl">
-                AlmaraPay provides institutional-grade liquidity and settlement infrastructure, 
-                bridging the gap between traditional fiat systems and the digital economy.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Button 
-                  onClick={() => navigate("/contact")}
-                  className="bg-almara-gold text-almara-navy hover:bg-almara-gold/90 font-bold px-8 h-14 rounded-xl border-0"
-                >
-                  Contact Our Desk
-                </Button>
-              </div>
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-almara-gold/10 border border-almara-gold/20 text-almara-gold text-xs font-bold uppercase tracking-widest mb-6">
+              OTC Digital Asset Exchange & Settlement
             </div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="bg-card border border-border rounded-[2.5rem] p-12 relative overflow-hidden shadow-2xl"
-            >
-              <div className="relative z-10">
-                <div className="w-16 h-16 rounded-2xl bg-almara-gold/10 flex items-center justify-center text-almara-gold mb-8">
-                  <Globe size={32} />
-                </div>
-                <h3 className="text-3xl font-display font-bold mb-6 text-foreground">Global Liquidity, Local Settlement</h3>
-                <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                  Access deep liquidity pools through our regulated OTC desk while settling instantly 
-                  in local currencies via AlmaraPay's established payment rails.
-                </p>
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="bg-background/50 p-4 rounded-xl border border-border">
-                    <div className="text-almara-gold font-bold mb-1">99.9%</div>
-                    <div className="text-xs uppercase tracking-tighter text-muted-foreground">Price Certainty</div>
-                  </div>
-                  <div className="bg-background/50 p-4 rounded-xl border border-border">
-                    <div className="text-almara-gold font-bold mb-1">20+</div>
-                    <div className="text-xs uppercase tracking-tighter text-muted-foreground">Markets Supported</div>
-                  </div>
-                </div>
-              </div>
-              <div className="absolute top-0 right-0 w-64 h-64 bg-almara-gold/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* API Features Grids repurposed as Core Pillars */}
-      <section className="py-24">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: Zap,
-                title: "Fast Settlement",
-                desc: "Average transaction completion time in minutes across all supported regions.",
-              },
-              {
-                icon: ShieldCheck,
-                title: "Deep Liquidity",
-                desc: "Institutional partnerships ensure minimal slippage even for high-value orders.",
-              },
-              {
-                icon: Smartphone,
-                title: "APM Integration",
-                desc: "Seamlessly move between Mobile Money and Digital Asset rails.",
-              },
-              {
-                icon: Building,
-                title: "SME Focused",
-                desc: "Optimized for the needs of importers, exporters, and freelancers.",
-              },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="p-8 rounded-2xl bg-card border border-border hover:border-almara-gold/20 transition-all shadow-sm"
-              >
-                <div className="w-12 h-12 rounded-xl bg-almara-gold/5 flex items-center justify-center text-almara-gold mb-6">
-                  <item.icon size={24} />
-                </div>
-                <h4 className="text-xl font-bold mb-3 text-foreground">{item.title}</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Our Services Section */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-4xl mx-auto mb-20">
-            <h2 className="text-4xl md:text-5xl font-display font-extrabold mb-8 text-foreground">
-              Comprehensive <span className="text-almara-gold">OTC Services</span>
-            </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              AlmaraPay provides a suite of services designed for the modern African digital economy, 
-              ensuring price certainty, institutional security, and regulatory transparency.
+            <h1 className="text-5xl md:text-7xl font-display font-extrabold mb-8 text-foreground">
+              Institutional-Grade <br />
+              <span className="text-almara-gold">Settlement Services.</span>
+            </h1>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              AlmaraPay offers agent-assisted Over-The-Counter (OTC) digital asset services that enable 
+              individuals and businesses to seamlessly convert local currency to digital assets and back, 
+              using trusted payment rails across Africa.
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Remittance Settlement",
-                desc: "Optimizing cross-border flows for licensed remittance providers with instant digital asset backends.",
-                icon: Globe,
-              },
-              {
-                title: "Treasury OTC Desk",
-                desc: "High-value execution for corporate entities and institutional partners with dedicated account management.",
-                icon: Building,
-              },
-              {
-                title: "Compliance Model",
-                desc: "A risk-based framework for KYC, KYB, and AML screening integrated into every settlement flow.",
-                icon: ShieldCheck,
-              },
-              {
-                title: "Liquidity Provision",
-                desc: "Consistent market liquidity for partners requiring digital asset on-ramp and off-ramp capabilities.",
-                icon: Zap,
-              },
-              {
-                title: "Agent Settlement",
-                desc: "Physical infrastructure support for cash-to-digital conversions via verified agent terminals.",
-                icon: Laptop,
-              },
-              {
-                title: "Merchant APIs",
-                desc: "Automated settlements for e-commerce platforms and merchants accepting digital asset payments.",
-                icon: Cpu,
-              },
-            ].map((service, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="group p-10 rounded-3xl bg-card border border-border hover:border-almara-gold/40 transition-all duration-500 text-center shadow-lg hover:shadow-almara-gold/5"
-              >
-                <div className="w-16 h-16 rounded-2xl bg-almara-gold/10 flex items-center justify-center text-almara-gold mx-auto mb-8 group-hover:scale-110 transition-transform duration-500">
-                  <service.icon size={32} />
-                </div>
-                <h3 className="text-2xl font-bold mb-4 text-foreground">
-                  {service.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed text-sm">
-                  {service.desc}
-                </p>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
-      {/* Integration Workflow repurposed for Onboarding */}
-      <section className="py-24 bg-secondary/30">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-display font-bold text-center mb-20 text-foreground">
-            Onboarding <span className="text-almara-gold">Process</span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative text-foreground">
-            {/* Connector Line */}
-            <div className="hidden md:block absolute top-10 left-[20%] right-[20%] h-px bg-border z-0"></div>
-
-            {[
-              {
-                step: "01",
-                title: "KYC/KYB Verification",
-                desc: "Submit your institutional or individual documentation for compliance screening.",
-              },
-              {
-                step: "02",
-                title: "Liquidity Access",
-                desc: "Get access to our live OTC rates and dedicated settlement channels.",
-              },
-              {
-                step: "03",
-                title: "Execute & Settle",
-                desc: "Initiate your transaction and receive settlement in your preferred local currency.",
-              },
-            ].map((item, i) => (
-              <div key={i} className="relative z-10 text-center">
-                <div className="w-20 h-20 rounded-full bg-background border border-almara-gold flex items-center justify-center mx-auto mb-8 shadow-lg shadow-almara-gold/10">
-                  <span className="text-2xl font-display font-bold text-almara-gold">
-                    {item.step}
-                  </span>
-                </div>
-                <h4 className="text-xl font-bold mb-4">{item.title}</h4>
-                <p className="text-muted-foreground">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Integrity note */}
+      {/* Services Grid */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto rounded-3xl p-10 border border-almara-gold/20 bg-almara-gold/5 flex flex-col md:flex-row gap-10 items-center">
-            <div className="shrink-0 w-20 h-20 rounded-2xl bg-almara-gold/10 flex items-center justify-center text-almara-gold">
-              <ShieldCheck size={40} />
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold mb-4 text-foreground">
-                Institutional Integrity & Compliance
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                AlmaraPay operates as a pure settlement rail, not a speculative exchange. 
-                We adhere to strict market-by-market regulatory alignment and integrity standards. 
-                Your digital asset transactions are handled with the highest level of risk management.
-              </p>
-              <div className="mt-6 flex items-center gap-4 text-almara-gold font-bold group cursor-pointer" onClick={() => navigate("/contact")}>
-                Inquire About Compliance Standards{" "}
-                <ArrowRight
-                  size={18}
-                  className="group-hover:translate-x-1 transition-transform"
-                />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* 1. Crypto Fiat Ramp */}
+            <div className="p-10 rounded-[2.5rem] bg-card border border-border hover:border-almara-gold/40 transition-all duration-500 shadow-xl group">
+              <div className="w-16 h-16 rounded-2xl bg-almara-gold/10 flex items-center justify-center text-almara-gold mb-8 group-hover:scale-110 transition-transform">
+                <RefreshCw size={32} />
               </div>
+              <h3 className="text-2xl font-bold mb-4 text-foreground">1. Crypto ↔ Fiat OTC</h3>
+              <p className="text-muted-foreground mb-6 text-sm leading-relaxed">
+                Buy USDT with mobile money, bank filters, or agent channels. Sell for instant local currency payout with price certainty.
+              </p>
+              <ul className="space-y-2 text-sm text-foreground/80">
+                <li className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-almara-gold" />
+                  Mobile money & Bank transfer
+                </li>
+                <li className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-almara-gold" />
+                  Approved agent channels
+                </li>
+                <li className="flex items-center gap-2 text-almara-gold font-semibold">
+                  <div className="w-1.5 h-1.5 rounded-full bg-almara-gold" />
+                  Zero market slippage
+                </li>
+              </ul>
+              <Button 
+                variant="link" 
+                className="mt-6 text-almara-gold p-0 font-bold hover:gap-3 transition-all group-hover:translate-x-1"
+                onClick={() => navigate("/services/crypto-fiat-ramp")}
+              >
+                Learn More <ArrowRight size={18} className="ml-1" />
+              </Button>
+            </div>
+
+            {/* 2. Agent-Assisted */}
+            <div className="p-10 rounded-[2.5rem] bg-card border border-border hover:border-almara-gold/40 transition-all duration-500 shadow-xl group">
+              <div className="w-16 h-16 rounded-2xl bg-almara-gold/10 flex items-center justify-center text-almara-gold mb-8 group-hover:scale-110 transition-transform">
+                <Users size={32} />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-foreground">2. Agent-Assisted OTC</h3>
+              <p className="text-muted-foreground mb-6 text-sm leading-relaxed">
+                Trust-based execution through verified partners for markets with low self-serve adoption.
+              </p>
+              <ul className="space-y-2 text-sm text-foreground/80">
+                <li className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-almara-gold" />
+                  Assisted initiation & execution
+                </li>
+                <li className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-almara-gold" />
+                  Human-verified KYC/KYB
+                </li>
+                <li className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-almara-gold" />
+                  User education & orientation
+                </li>
+              </ul>
+              <Button 
+                variant="link" 
+                className="mt-6 text-almara-gold p-0 font-bold hover:gap-3 transition-all group-hover:translate-x-1"
+                onClick={() => navigate("/services/agent-assisted-otc")}
+              >
+                Learn More <ArrowRight size={18} className="ml-1" />
+              </Button>
+            </div>
+
+            {/* 3. SME & Merchant */}
+            <div className="p-10 rounded-[2.5rem] bg-card border border-border hover:border-almara-gold/40 transition-all duration-500 shadow-xl group">
+              <div className="w-16 h-16 rounded-2xl bg-almara-gold/10 flex items-center justify-center text-almara-gold mb-8 group-hover:scale-110 transition-transform">
+                <Building size={32} />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-foreground">3. SME & Merchant OTC</h3>
+              <p className="text-muted-foreground mb-6 text-sm leading-relaxed">
+                Liquidity management for cross-border settlements, imports, and remote work payments.
+              </p>
+              <ul className="space-y-2 text-sm text-foreground/80">
+                <li className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-almara-gold" />
+                  Importers & Exporters
+                </li>
+                <li className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-almara-gold" />
+                  Freelancers & Remote workers
+                </li>
+                <li className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-almara-gold" />
+                  Marketplaces & Digital merchants
+                </li>
+              </ul>
+              <Button 
+                variant="link" 
+                className="mt-6 text-almara-gold p-0 font-bold hover:gap-3 transition-all group-hover:translate-x-1"
+                onClick={() => navigate("/services/sme-merchant-otc")}
+              >
+                Learn More <ArrowRight size={18} className="ml-1" />
+              </Button>
+            </div>
+
+            {/* 4. Remittance OTC */}
+            <div className="p-10 rounded-[2.5rem] bg-card border border-border hover:border-almara-gold/40 transition-all duration-500 shadow-xl group">
+              <div className="w-16 h-16 rounded-2xl bg-almara-gold/10 flex items-center justify-center text-almara-gold mb-8 group-hover:scale-110 transition-transform">
+                <Globe size={32} />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-foreground">4. Remittance Settlement</h3>
+              <p className="text-muted-foreground mb-6 text-sm leading-relaxed">
+                Crypto-powered remittances with local currency payout via mobile money or bank.
+              </p>
+              <ul className="space-y-2 text-sm text-foreground/80">
+                <li className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-almara-gold" />
+                  Faster, low-cost settlement
+                </li>
+                <li className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-almara-gold" />
+                  Mobile money/Bank distribution
+                </li>
+                <li className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-almara-gold" />
+                  Assisted agent payouts
+                </li>
+              </ul>
+              <Button 
+                variant="link" 
+                className="mt-6 text-almara-gold p-0 font-bold hover:gap-3 transition-all group-hover:translate-x-1"
+                onClick={() => navigate("/services/remittance-settlement")}
+              >
+                Learn More <ArrowRight size={18} className="ml-1" />
+              </Button>
+            </div>
+
+            {/* 5. Treasury Desk */}
+            <div className="p-10 rounded-[2.5rem] bg-card border border-border hover:border-almara-gold/40 transition-all duration-500 shadow-xl group">
+              <div className="w-16 h-16 rounded-2xl bg-almara-gold/10 flex items-center justify-center text-almara-gold mb-8 group-hover:scale-110 transition-transform">
+                <Wallet size={32} />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-foreground">5. Treasury OTC Desk</h3>
+              <p className="text-muted-foreground mb-6 text-sm leading-relaxed">
+                Large-volume conversions and liquidity management for partners and fintechs.
+              </p>
+              <ul className="space-y-2 text-sm text-foreground/80">
+                <li className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-almara-gold" />
+                  High-volume execution
+                </li>
+                <li className="flex items-center gap-2 text-almara-gold font-semibold">
+                  <div className="w-1.5 h-1.5 rounded-full bg-almara-gold" />
+                  Reduced volatility exposure
+                </li>
+                <li className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-almara-gold" />
+                  Enhanced controls & reporting
+                </li>
+              </ul>
+              <Button 
+                variant="link" 
+                className="mt-6 text-almara-gold p-0 font-bold hover:gap-3 transition-all group-hover:translate-x-1"
+                onClick={() => navigate("/services/treasury-otc-desk")}
+              >
+                Learn More <ArrowRight size={18} className="ml-1" />
+              </Button>
+            </div>
+
+            {/* 6. Compliance */}
+            <div className="p-10 rounded-[2.5rem] bg-card border border-border hover:border-almara-gold/40 transition-all duration-500 shadow-xl group">
+              <div className="w-16 h-16 rounded-2xl bg-almara-gold/10 flex items-center justify-center text-almara-gold mb-8 group-hover:scale-110 transition-transform">
+                <ShieldCheck size={32} />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-foreground">6. Compliance-First</h3>
+              <p className="text-muted-foreground mb-6 text-sm leading-relaxed">
+                Risk-based operating model ensuring regulatory alignment in every market we serve.
+              </p>
+              <ul className="space-y-2 text-sm text-foreground/80">
+                <li className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-almara-gold" />
+                  Risk-based KYC / KYB
+                </li>
+                <li className="flex items-center gap-2 text-emerald-500 font-semibold">
+                  <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                  Sanctions & AML screening
+                </li>
+                <li className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-almara-gold" />
+                  Transaction monitoring
+                </li>
+              </ul>
+              <Button 
+                variant="link" 
+                className="mt-6 text-almara-gold p-0 font-bold hover:gap-3 transition-all group-hover:translate-x-1"
+                onClick={() => navigate("/services/compliance-model")}
+              >
+                Learn More <ArrowRight size={18} className="ml-1" />
+              </Button>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Strategic Value Section */}
+      <section className="py-24 bg-secondary/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto rounded-[3rem] p-12 bg-almara-navy text-white relative overflow-hidden shadow-2xl">
+            <div className="relative z-10">
+              <h2 className="text-3xl font-display font-bold mb-8 text-almara-gold">Strategic Value</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <Zap className="text-almara-gold" size={20} />
+                    <span>Extends APM and mobile money footprint</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Zap className="text-almara-gold" size={20} />
+                    <span>Monetizes cross-border and crypto-linked flows</span>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <Zap className="text-almara-gold" size={20} />
+                    <span>Supports financial inclusion and SME growth</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Zap className="text-almara-gold" size={20} />
+                    <span>Regulator-friendly positioning</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="absolute top-0 right-0 w-64 h-64 bg-almara-gold/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA section */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-display font-bold mb-8 text-foreground">Ready to Bridge Your Finance?</h2>
+          <Button 
+            size="lg"
+            className="bg-almara-gold text-almara-navy hover:bg-almara-gold/90 font-bold px-12 h-16 rounded-full"
+            onClick={() => navigate("/contact")}
+          >
+            Contact OTC Desk
+          </Button>
         </div>
       </section>
     </MainLayout>
   );
 };
 
+const RefreshCw = ({ size }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 2v6h-6"></path><path d="M3 12a9 9 0 0 1 15-6.7L21 8"></path><path d="M3 22v-6h6"></path><path d="M21 12a9 9 0 0 1-15 6.7L3 16"></path></svg>
+);
+
+const Wallet = ({ size }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"></path><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"></path></svg>
+);
+
 const Globe = ({ size }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20"></path><path d="M2 12h20"></path></svg>
 );
+
+const Users = ({ size }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+);
+
+const Building = ({ size }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg>
+);
+
+export default Developers;
 
 const Smartphone = ({ size }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect><path d="M12 18h.01"></path></svg>
 );
 
-export default Developers;

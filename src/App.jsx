@@ -19,6 +19,9 @@ import SMEMerchantOTC from "./pages/solutions/SMEMerchantOTC";
 import RemittanceSettlement from "./pages/solutions/RemittanceSettlement";
 import TreasuryOTCDesk from "./pages/solutions/TreasuryOTCDesk";
 import ComplianceModel from "./pages/solutions/ComplianceModel";
+import CardCollections from "./pages/solutions/CardCollections";
+import MobileMoney from "./pages/solutions/MobileMoney";
+import AlternativePayments from "./pages/solutions/AlternativePayments";
 import "./index.css";
 
 // Scroll to top on route change
@@ -64,10 +67,14 @@ const AppContent = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
-          <Route path="/products/crypto-fiat-ramp" element={<CryptoFiatRamp />} />
-          <Route path="/products/agent-assisted-otc" element={<AgentAssistedOTC />} />
-          <Route path="/products/sme-merchant-otc" element={<SMEMerchantOTC />} />
+          <Route path="/products/cards" element={<CardCollections />} />
+          <Route path="/products/mobile-money" element={<MobileMoney />} />
+          <Route path="/products/alternative-payments" element={<AlternativePayments />} />
+          
           <Route path="/services" element={<Developers />} />
+          <Route path="/services/crypto-fiat-ramp" element={<CryptoFiatRamp />} />
+          <Route path="/services/agent-assisted-otc" element={<AgentAssistedOTC />} />
+          <Route path="/services/sme-merchant-otc" element={<SMEMerchantOTC />} />
           <Route path="/services/remittance-settlement" element={<RemittanceSettlement />} />
           <Route path="/services/treasury-otc-desk" element={<TreasuryOTCDesk />} />
           <Route path="/services/compliance-model" element={<ComplianceModel />} />

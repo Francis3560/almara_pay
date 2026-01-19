@@ -16,12 +16,12 @@ const slides = [
   {
     heading: (
       <>
-        OTC Digital Asset <br />
-        <span className="text-almara-gold italic">Exchange & Settlement Services</span>
+        Effortless Transactions <br />
+        <span className="text-almara-gold italic">in the Digital Era.</span>
       </>
     ),
     subheading:
-      "AlmaraPay offers agent-assisted Over-The-Counter (OTC) digital asset services that enable individuals and businesses to seamlessly convert local currency to digital assets and back, using trusted payment rails across Africa.",
+      "Transforming how you move money with secure OTC digital asset settlement across Africa.",
     bgDark:
       "https://res.cloudinary.com/dvkt0lsqb/image/upload/v1768812003/Almara_hvbvr4.png",
     bgLight:
@@ -35,7 +35,7 @@ const slides = [
       </>
     ),
     subheading:
-      "Buy and sell digital assets via Regulated Payment Rails. Secure, reliable, and built for scale with 99.9% uptime and bank-grade security.",
+      "Regulated OTC settlement via mobile money, bank rails, and verified agent networks.",
     bgDark:
       "https://res.cloudinary.com/dvkt0lsqb/image/upload/v1768804322/Paystack_with_no_logo_mslob3.png",
     bgLight:

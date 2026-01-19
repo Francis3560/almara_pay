@@ -43,17 +43,20 @@ export const Navbar = () => {
       name: "Our Products", 
       path: "/products",
       subLinks: [
-        { name: "Crypto ↔ Fiat Ramp", path: "/products/crypto-fiat-ramp" },
-        { name: "Agent-Assisted OTC", path: "/products/agent-assisted-otc" },
-        { name: "SME & Merchant OTC", path: "/products/sme-merchant-otc" },
+        { name: "Card Collections", path: "/products/cards" },
+        { name: "Mobile Money", path: "/products/mobile-money" },
+        { name: "Alternative Payments", path: "/products/alternative-payments" },
       ]
     },
     { 
       name: "Services", 
       path: "/services",
       subLinks: [
+        { name: "Crypto ↔ Fiat OTC", path: "/services/crypto-fiat-ramp" },
+        { name: "Agent-Assisted OTC", path: "/services/agent-assisted-otc" },
+        { name: "SME & Merchant Services", path: "/services/sme-merchant-otc" },
         { name: "Remittance Settlement", path: "/services/remittance-settlement" },
-        { name: "Treasury OTC Desk", path: "/services/treasury-otc-desk" },
+        { name: "High-Value Treasury", path: "/services/treasury-otc-desk" },
         { name: "Compliance Model", path: "/services/compliance-model" },
       ]
     },
