@@ -202,15 +202,15 @@ const PaymentMethods = () => (
   <div className="py-12 border-y border-border bg-secondary/30">
     <div className="w-full px-4 sm:px-8 lg:px-12 text-center md:text-left">
       <p className="text-center text-xs font-bold uppercase tracking-[0.3em] text-muted-foreground/60 mb-8">
-        OTC Settlement & Rail Infrastructure
+        Payment Methods We Support
       </p>
       <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
         {[
           "Mobile Money",
           "Bank Transfer",
-          "Agent Network",
-          "Digital Assets (USDT/USDC)",
-          "Treasury Desk",
+          "Agent & Cash Network",
+          "Stablecoins (USDT / USDC) ",
+          "High-Volume Settlements",
         ].map((m) => (
           <div
             key={m}

@@ -20,8 +20,7 @@ const FeaturedBusinesses = () => {
             Designed for Every Phase of Your Business.
           </h2>
           <p className="text-muted-foreground text-lg">
-            From small startups to multinational enterprises, Almara Pay provides
-            the tools you need to move money across borders.
+           Whether you’re launching, scaling, or processing high volumes, AlmaraPay helps you collect and pay out money across Africa with confidence.
           </p>
         </div>
 
