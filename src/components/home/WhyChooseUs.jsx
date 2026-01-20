@@ -16,49 +16,49 @@ const features = [
     icon: Lock,
     title: "Secure Payments",
     description:
-      "Your transactions are safeguarded with top-tier security at every step.",
+      "Every transaction is protected with industry-standard security to keep your funds and customers safe.",
   },
   {
     icon: Handshake,
     title: "Trusted Network",
     description:
-      "Partner with a growing network of businesses that rely on AlmaraPay for efficient payment solutions.",
+      "Work with a payment partner trusted by merchants operating across multiple African markets.",
   },
   {
     icon: ShieldCheck,
     title: "Advanced Protection",
     description:
-      "Benefit from cutting-edge fraud detection and secure transaction processing.",
+      "Built-in controls help reduce failed payments and protect your business from fraud.",
   },
   {
     icon: Code2,
     title: "Reliable API",
     description:
-      "AlmaraPay provides a secure and robust API, supporting diverse payment methods and multiple regions to cater to your needs.",
+      "A simple, reliable API that lets you collect payments and pay out funds across multiple countries.",
   },
   {
     icon: Zap,
     title: "Swift and User-Friendly",
     description:
-      "Our platform ensures ultra-fast transaction times under 10 seconds with a user-friendly interface for effortless tracking and reconciliation.",
+      "Fast transactions and an easy-to-use dashboard for tracking payments and payouts.",
   },
   {
     icon: Headset,
     title: "Round-the-Clock Support",
     description:
-      "Our dedicated support team is available 24/7 via Slack, Skype, chat, email, or phone to address your concerns promptly within minutes.",
+      "Dedicated support available whenever your business needs help.",
   },
   {
     icon: Globe,
     title: "High Availability",
     description:
-      "With optimized systems and robust gateways, AlmaraPay guarantees a reliable and highly accessible platform for uninterrupted service.",
+      "A highly available platform built to handle business-critical payment flows.",
   },
   {
     icon: Puzzle,
     title: "Tailored Solutions",
     description:
-      "Customize our payment gateway to fit your business needs with flexible APIs and integration options for a seamless experience.",
+      "Flexible payment solutions that adapt to how your business operates.",
   },
 ];
 
@@ -105,8 +105,7 @@ const WhyChooseUs = () => {
             viewport={{ once: true }}
             className="text-lg text-muted-foreground leading-relaxed"
           >
-            Experience seamless digital transactions with AlmaraPay — secure,
-            dependable, and tailored for businesses of every scale.
+           AlmaraPay helps merchants collect and pay out money across Africa — reliably, securely, and at scale.
           </motion.p>
         </div>
 

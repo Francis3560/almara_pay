@@ -33,7 +33,7 @@ const FeaturedBusinesses = () => {
           <FeatureCard
             icon={Smartphone}
             title="C2B / B2C Collections"
-            desc="Integrate with major telecom providers for lightning-fast mobile money collections and payouts."
+            desc="Collect payments from customers and pay them out instantly using trusted mobile money networks."
           />
           <FeatureCard
             icon={Building2}
