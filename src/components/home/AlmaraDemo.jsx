@@ -14,8 +14,8 @@ const AlmaraDemo = () => {
   ];
 
   return (
-    <section className="py-24 bg-background overflow-hidden">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-12 bg-background overflow-hidden">
+      <div className="w-full px-4 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Text Content */}
           <motion.div

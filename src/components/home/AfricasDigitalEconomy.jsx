@@ -9,9 +9,9 @@ const AfricasDigitalEconomy = () => {
   return (
     <>
       {/* Infrastructure Section */}
-      <section className="py-24 bg-background relative overflow-hidden border-y border-border">
+      <section className="py-12 bg-background relative overflow-hidden border-y border-border">
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-almara-gold/20 to-transparent"></div>
-        <div className="container mx-auto px-4">
+        <div className="w-full px-4 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div className="relative">
               <div className="aspect-square bg-secondary/30 border border-border rounded-full flex items-center justify-center relative">

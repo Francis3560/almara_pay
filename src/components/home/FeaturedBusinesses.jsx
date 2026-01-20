@@ -13,8 +13,8 @@ const FeatureCard = ({ icon: Icon, title, desc }) => (
 
 const FeaturedBusinesses = () => {
   return (
-    <section className="py-24 lg:py-40">
-      <div className="container mx-auto px-4">
+    <section className="py-12 lg:py-20">
+      <div className="w-full px-4 sm:px-8 lg:px-12">
         <div className="text-center max-w-3xl mx-auto mb-20">
           <h2 className="text-4xl md:text-5xl font-display font-extrabold mb-6">
             Designed for Every Phase of Your Business.

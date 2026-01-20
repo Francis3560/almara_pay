@@ -82,7 +82,7 @@ export const Navbar = () => {
           : "bg-transparent backdrop-blur-[2px]"
       )}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-4 sm:px-8 lg:px-12">
         <div className="flex justify-between items-center h-16 lg:h-20">
           <Link to="/" className="hover:opacity-90 transition-opacity flex items-center gap-2 group">
             <Logo className="h-10 md:h-12 transition-transform duration-300 group-hover:scale-105" />

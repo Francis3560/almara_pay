@@ -113,26 +113,47 @@ const TreasuryOTCDesk = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="lg:w-1/2">
-              <h2 className="text-4xl font-display font-bold mb-6">Designed for <span className="text-almara-gold">Institutional Excellence</span></h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                AlmaraPay's Treasury Desk provides the sophisticated tools and human expertise 
-                required for large-scale operations. Our focus on compliance and stability makes 
-                us the ideal partner for your high-value transactions.
+              <h2 className="text-4xl font-display font-bold mb-6">
+                Move large volumes with <span className="text-almara-gold">speed and control.</span>
+              </h2>
+              <p className="text-lg text-muted-foreground mb-10">
+                Move large volumes between fiat and stablecoins with speed and control.
               </p>
-              <ul className="space-y-4 mb-10 text-foreground">
-                <li className="flex items-center gap-3">
-                  <div className="w-6 h-6 rounded-full bg-green-500/20 text-green-500 flex items-center justify-center"><CheckCircle2 size={16} /></div>
-                  Dedicated account manager
-                </li>
-                <li className="flex items-center gap-3">
-                  <div className="w-6 h-6 rounded-full bg-green-500/20 text-green-500 flex items-center justify-center"><CheckCircle2 size={16} /></div>
-                  Preferred rates for large volumes
-                </li>
-                <li className="flex items-center gap-3">
-                  <div className="w-6 h-6 rounded-full bg-green-500/20 text-green-500 flex items-center justify-center"><CheckCircle2 size={16} /></div>
-                  Priority settlement settlement
-                </li>
-              </ul>
+
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-sm font-bold uppercase tracking-wider text-muted-foreground mb-4">What You Can Do</h3>
+                  <div className="space-y-3">
+                    {[
+                      "Convert fiat to stablecoins (on-ramp)",
+                      "Convert stablecoins to local currency (off-ramp)",
+                      "Handle high-value transactions efficiently",
+                      "Receive payouts through local payment methods"
+                    ].map((feature, i) => (
+                      <div key={i} className="flex items-center gap-3">
+                        <CheckCircle2 size={20} className="text-almara-gold shrink-0" />
+                        <span className="text-foreground/80 font-medium">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="pt-6 border-t border-border">
+                  <h3 className="text-sm font-bold uppercase tracking-wider text-muted-foreground mb-4">Best For</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      "Crypto platforms",
+                      "OTC desks",
+                      "Cross-border merchants",
+                      "High-volume traders and businesses"
+                    ].map((item, i) => (
+                      <span key={i} className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-almara-gold/10 text-almara-gold border border-almara-gold/20">
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="lg:w-1/2 w-full">
               <div className="bg-secondary/50 p-1 rounded-3xl border border-border">

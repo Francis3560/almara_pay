@@ -137,7 +137,7 @@ export const Footer = () => {
                   className="text-almara-gold shrink-0 mt-0.5"
                 />
                 <span className="text-muted-foreground text-sm">
-                  Nairobi, Kenya • Lagos, Nigeria • Johannesburg, SA
+                  Nairobi Kenya
                 </span>
               </li>
               <li className="flex items-center gap-3">

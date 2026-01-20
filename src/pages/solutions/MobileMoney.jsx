@@ -34,26 +34,49 @@ const MobileMoney = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
             <div className="space-y-8">
-              <h2 className="text-4xl font-display font-bold text-foreground">Reach <span className="text-almara-gold">Millions</span> of mobile users instantly.</h2>
+              <h2 className="text-4xl font-display font-bold text-foreground">Mobile Money & <span className="text-almara-gold">Local Payments (APMs)</span></h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Mobile money is the heartbeat of African commerce. With AlmaraPay, you get a 
-                single integration to all major telcos, ensuring your customers can pay with ease.
+                Accept and pay out using Africa’s most trusted payment methods.
               </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {[
-                  "M-Pesa, MTN, Airtel",
-                  "Instant C2B Push",
-                  "Bulk B2C Payouts",
-                  "Real-time Settlement",
-                  "Automated Reconciliations",
-                  "High Success Rates"
-                ].map((feature, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <CheckCircle2 className="text-almara-gold shrink-0" size={20} />
-                    <span className="text-foreground/80 font-medium">{feature}</span>
-                  </div>
-                ))}
+
+              <div>
+                <h3 className="text-sm font-bold uppercase tracking-wider text-muted-foreground mb-3">Available In</h3>
+                <p className="font-medium text-foreground leading-relaxed">
+                  Tanzania, Kenya, Uganda, Zambia, Ivory Coast, Senegal, Benin, and DRC
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-sm font-bold uppercase tracking-wider text-muted-foreground mb-3">What You Can Do</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {[
+                    "Collect payments from customers via mobile money",
+                    "Pay out merchants, agents, or users instantly",
+                    "Settle in local currencies",
+                    "Track payments in real time"
+                  ].map((feature, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <CheckCircle2 className="text-almara-gold shrink-0" size={20} />
+                      <span className="text-foreground/80 font-medium">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="pt-6 border-t border-border">
+                <h3 className="text-sm font-bold uppercase tracking-wider text-muted-foreground mb-3">Best For</h3>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    "Marketplaces", 
+                    "Gaming & digital platforms", 
+                    "Cross-border merchants", 
+                    "Subscription businesses"
+                  ].map((item, i) => (
+                    <span key={i} className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-almara-gold/10 text-almara-gold border border-almara-gold/20">
+                      {item}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
 

@@ -85,11 +85,11 @@ const WhyChooseUs = () => {
   };
 
   return (
-    <section className="py-24 bg-background overflow-hidden relative">
+    <section className="py-12 bg-background overflow-hidden relative">
       {/* Background Decorative Element */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-almara-gold/5 rounded-full blur-3xl pointer-events-none -z-10"></div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-4 sm:px-8 lg:px-12">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.h2
             initial={{ opacity: 0, y: -20 }}

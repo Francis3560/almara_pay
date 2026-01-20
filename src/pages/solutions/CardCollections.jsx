@@ -47,24 +47,51 @@ const CardCollections = () => {
             <div className="space-y-8">
               <h2 className="text-4xl font-display font-bold text-foreground">Accept cards from <span className="text-almara-gold">anywhere</span> in the world.</h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Connect your business to the global economy. Our platform supports settlements in multiple 
-                currencies and provides a seamless checkout experience for your customers.
+                Accept international and local cards with fast checkout and high success rates.
               </p>
+
+              <div>
+                <h3 className="text-sm font-bold uppercase tracking-wider text-muted-foreground mb-3">Supported Cards</h3>
+                <div className="flex flex-wrap gap-3">
+                  {["Visa", "Mastercard", "American Express"].map((card) => (
+                    <div key={card} className="px-4 py-2 bg-secondary/50 rounded-lg border border-border text-sm font-medium">
+                      {card}
+                    </div>
+                  ))}
+                </div>
+              </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {[
-                  "Visa & Mastercard",
-                  "Verve & Local Schemes",
-                  "Direct Bank Debit",
-                  "Recurring Billing",
-                  "Real-time Fraud Detection",
-                  "PCIDSS Level 1"
-                ].map((feature, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <CheckCircle2 className="text-almara-gold shrink-0" size={20} />
-                    <span className="text-foreground/80 font-medium">{feature}</span>
-                  </div>
-                ))}
+              <div>
+                <h3 className="text-sm font-bold uppercase tracking-wider text-muted-foreground mb-3">What You Can Do</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {[
+                    "Collect card payments globally",
+                    "Reduce failed payments with smart routing",
+                    "Monitor transactions and chargebacks",
+                    "Settle securely and transparently"
+                  ].map((feature, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <CheckCircle2 className="text-almara-gold shrink-0" size={20} />
+                      <span className="text-foreground/80 font-medium">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="pt-6 border-t border-border">
+                <h3 className="text-sm font-bold uppercase tracking-wider text-muted-foreground mb-3">Best For</h3>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    "Online merchants", 
+                    "SaaS platforms", 
+                    "Forex & digital services", 
+                    "Global businesses selling into Africa"
+                  ].map((item, i) => (
+                    <span key={i} className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-almara-gold/10 text-almara-gold border border-almara-gold/20">
+                      {item}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

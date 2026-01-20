@@ -49,8 +49,8 @@ const Contact = () => {
               <ContactInfo
                 icon={Mail}
                 title="OTC Desk Inquiries"
-                content="hello@almarapay.com"
-                link="mailto:hello@almarapay.com"
+                content="sales@almarapay.com"
+                link="mailto:sales@almarapay.com"
               />
               <ContactInfo
                 icon={MessageCircle}

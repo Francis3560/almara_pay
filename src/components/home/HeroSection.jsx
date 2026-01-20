@@ -11,21 +11,36 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "../theme-provider";
+import ReactCountryFlag from "react-country-flag";
 
 const slides = [
   {
     heading: (
       <>
-        Effortless Transactions <br />
-        <span className="text-almara-gold italic">in the Digital Era.</span>
+        Mobile Money <br />
+        <span className="text-almara-gold">Collections.</span>
       </>
     ),
     subheading:
-      "Transforming how you move money with secure OTC digital asset settlement across Africa.",
+      "Accept payments across Africa’s most popular mobile money networks. Reliable collections and instant disbursements for your business.",
     bgDark:
       "https://res.cloudinary.com/dvkt0lsqb/image/upload/v1768812003/Almara_hvbvr4.png",
     bgLight:
       "https://res.cloudinary.com/dvkt0lsqb/image/upload/v1768812450/Almara_Transparent_ny77pp.png",
+  },
+  {
+    heading: (
+      <>
+        Card Collections <br />
+        <span className="text-almara-gold">& Payouts.</span>
+      </>
+    ),
+    subheading:
+      "Global payment infrastructure supporting Visa, Mastercard, and Verve. Pay and move money globally using secure online payment processing solutions.",
+    bgDark:
+      "https://res.cloudinary.com/dvkt0lsqb/image/upload/v1768906125/Carousel_wesfiz.png",
+    bgLight:
+      "https://res.cloudinary.com/dvkt0lsqb/image/upload/v1768906125/Carousel_wesfiz.png",
   },
   {
     heading: (
@@ -35,7 +50,7 @@ const slides = [
       </>
     ),
     subheading:
-      "Regulated OTC settlement via mobile money, bank rails, and verified agent networks.",
+      "Regulated OTC settlement via mobile money, bank rails, and verified agent networks. Buy and sell digital assets with instant settlement.",
     bgDark:
       "https://res.cloudinary.com/dvkt0lsqb/image/upload/v1768804322/Paystack_with_no_logo_mslob3.png",
     bgLight:
@@ -60,7 +75,7 @@ const Hero = () => {
     theme === "dark" ? activeSlide.bgDark : activeSlide.bgLight;
 
   return (
-    <section className="relative min-h-screen flex items-start overflow-hidden pt-32 md:pt-40 bg-background text-foreground">
+    <section className="relative min-h-screen flex items-start overflow-hidden pt-32 md:pt-40 bg-background text-foreground px-4">
       {/* Background Image Carousel - Hidden on Mobile */}
       <AnimatePresence mode="wait">
         <motion.div
@@ -85,14 +100,14 @@ const Hero = () => {
       </div>
 
       {/* Content - Left Aligned with Carousel Transitions */}
-      <div className="relative z-10 w-full pl-4 sm:pl-8 lg:pl-12 flex flex-col">
+      <div className="relative z-10 w-full flex flex-col">
         <div className="max-w-3xl">
           {/* Trust Badge */}
           <div className="flex items-center gap-2 mb-6">
             <div className="flex items-center gap-2 bg-secondary/30 backdrop-blur-md px-4 py-1.5 rounded-full border border-border">
               <Star className="w-4 h-4 text-almara-gold fill-current" />
               <span className="text-xs font-semibold tracking-wide uppercase">
-                Trusted by 12+ Businesses
+                Trusted by 12+ Countries
               </span>
             </div>
           </div>
@@ -136,10 +151,10 @@ const Hero = () => {
           </AnimatePresence>
 
           {/* Enhanced CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 items-start">
+          <div className="flex flex-wrap gap-4 items-start pb-8 mx-auto w-full">
             <Button
               size="lg"
-              className="bg-almara-gold hover:bg-almara-gold/90 text-almara-navy px-8 py-8 text-lg font-semibold rounded-full shadow-2xl transition-all duration-300 hover:scale-105 min-w-[200px] group border-0"
+              className="bg-almara-gold w-full sm:max-w-[200px] rounded-lg"
               onClick={() => navigate("/products")}
             >
               <span>Get Started</span>
@@ -148,7 +163,7 @@ const Hero = () => {
             <Button
               variant="outline"
               size="lg"
-              className="border-border bg-secondary/50 hover:bg-secondary text-foreground backdrop-blur-sm px-8 py-8 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105 min-w-[200px] group"
+              className="border-border border-almara-gold w-full sm:max-w-[200px] rounded-lg"
               onClick={() => navigate("/contact")}
             >
               <span>Contact Sales</span>
@@ -158,7 +173,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Carousel Dots */}
+      {/* Carousel Dots
       <div className="absolute bottom-12 right-12 z-30 flex gap-2">
         {slides.map((_, idx) => (
           <button
@@ -171,21 +186,21 @@ const Hero = () => {
             }`}
           />
         ))}
-      </div>
+      </div> */}
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+      {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
         <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center p-1">
           <div className="w-1.5 h-3 bg-white/70 rounded-full animate-pulse"></div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };
 
 const PaymentMethods = () => (
   <div className="py-12 border-y border-border bg-secondary/30">
-    <div className="container mx-auto px-4 text-center md:text-left">
+    <div className="w-full px-4 sm:px-8 lg:px-12 text-center md:text-left">
       <p className="text-center text-xs font-bold uppercase tracking-[0.3em] text-muted-foreground/60 mb-8">
         OTC Settlement & Rail Infrastructure
       </p>
@@ -214,9 +229,73 @@ const HeroSection = () => {
   return (
     <>
       <Hero />
+      <CountryCarousel />
       <PaymentMethods />
     </>
   );
 };
 
 export default HeroSection;
+
+const CountryCarousel = () => {
+  const countries = [
+    { name: "Tanzania", code: "TZ" },
+    { name: "Kenya", code: "KE" },
+    { name: "Uganda", code: "UG" },
+    { name: "Zambia", code: "ZM" },
+    { name: "Ivory Coast", code: "CI" },
+    { name: "Senegal", code: "SN" },
+    { name: "Benin", code: "BJ" },
+    { name: "DRC", code: "CD" },
+  ];
+
+  return (
+    <div className="py-6 border-t border-border bg-background overflow-hidden relative">
+      <div className="absolute inset-0 pointer-events-none z-10 bg-gradient-to-r from-background via-transparent to-background" />
+      
+      <div className="w-full px-4 sm:px-8 lg:px-12 mb-4">
+        <p className="text-center text-xs font-bold uppercase tracking-[0.3em] text-muted-foreground/60">
+          Available in:
+        </p>
+      </div>
+
+      <div className="flex overflow-hidden relative">
+        <motion.div
+          className="flex gap-12 sm:gap-16 items-center whitespace-nowrap"
+          animate={{ x: [0, -1000] }}
+          transition={{
+            x: {
+              repeat: Infinity,
+              repeatType: "loop",
+              duration: 30,
+              ease: "linear",
+            },
+          }}
+        >
+          {/* Duplicate the array multiple times to ensure smooth infinite scroll without gaps */}
+          {[...countries, ...countries, ...countries, ...countries].map((country, index) => (
+            <div
+              key={`${country.code}-${index}`}
+              className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors duration-300"
+            >
+              <ReactCountryFlag
+                countryCode={country.code}
+                svg
+                style={{
+                  width: '1.5em',
+                  height: '1.5em',
+                  borderRadius: '2px', 
+                  objectFit: 'cover'
+                }}
+                className="shadow-sm"
+              />
+              <span className="font-medium text-sm sm:text-base tracking-wide">
+                {country.name}
+              </span>
+            </div>
+          ))}
+        </motion.div>
+      </div>
+    </div>
+  );
+};
