@@ -159,7 +159,6 @@ export const Footer = () => {
         <div className="pt-10 border-t border-border flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-muted-foreground text-xs opacity-60">
             &copy; {new Date().getFullYear()} Almara Pay. All rights reserved.
-            Licensed as a Payment Service Provider.
           </p>
           <div className="flex gap-8">
             <a
