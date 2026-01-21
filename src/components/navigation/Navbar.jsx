@@ -49,7 +49,7 @@ export const Navbar = () => {
       ]
     },
     { 
-      name: "Services", 
+      name: "OTC Services", 
       path: "/services",
       subLinks: [
         { name: "Crypto ↔ Fiat OTC", path: "/services/crypto-fiat-ramp" },
