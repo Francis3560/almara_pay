@@ -148,12 +148,12 @@ export const Footer = () => {
                   sales@almarapay.com
                 </span>
               </li>
-              <li className="flex items-center gap-3">
+              {/* <li className="flex items-center gap-3">
                 <Phone size={18} className="text-almara-gold shrink-0" />
                 <span className="text-muted-foreground text-sm">
                   +254 700 000 000
                 </span>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
