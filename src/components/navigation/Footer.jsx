@@ -31,6 +31,8 @@ export const Footer = () => {
               </a> */}
               <a
                 href="https://www.linkedin.com/company/almarapay/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-9 h-9 flex items-center justify-center rounded-full bg-white/5 hover:bg-almara-gold/20 hover:text-almara-gold transition-all"
               >
                 <Linkedin size={18} />
