@@ -4,6 +4,8 @@ import { Mail, Phone, MapPin, MessageCircle, Send, Globe } from "lucide-react";
 import { MainLayout } from "@/layouts/MainLayout";
 import { Button } from "@/components/ui/button";
 
+
+
 const ContactInfo = ({ icon: Icon, title, content, link }) => (
   <div className="flex gap-6 p-6 rounded-2xl bg-card border border-border hover:border-almara-gold/20 transition-all shadow-sm">
     <div className="shrink-0 w-12 h-12 rounded-xl bg-almara-gold/10 flex items-center justify-center text-almara-gold">
@@ -192,24 +194,8 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Global Locations Map Placeholder */}
-      <section className="py-24 mb-16">
-        <div className="container mx-auto px-4">
-          <div className="aspect-[21/9] bg-card border border-border rounded-[3rem] relative overflow-hidden flex items-center justify-center shadow-inner">
-            <Globe className="text-almara-gold/10" size={300} />
-            <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
-            <div className="relative z-10 text-center">
-              <h2 className="text-3xl font-display font-bold mb-4 text-foreground">
-                Our Local Presence
-              </h2>
-              <p className="text-muted-foreground">
-                Supporting local economies with physical hubs in 6 African
-                nations.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+
+
     </MainLayout>
   );
 };
