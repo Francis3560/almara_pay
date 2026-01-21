@@ -23,24 +23,24 @@ export const Footer = () => {
               enterprise-grade infrastructure.
             </p>
             <div className="flex gap-4">
-              <a
+              {/* <a
                 href="#"
                 className="w-9 h-9 flex items-center justify-center rounded-full bg-white/5 hover:bg-almara-gold/20 hover:text-almara-gold transition-all"
               >
                 <Twitter size={18} />
-              </a>
+              </a> */}
               <a
                 href="https://www.linkedin.com/company/almarapay/"
                 className="w-9 h-9 flex items-center justify-center rounded-full bg-white/5 hover:bg-almara-gold/20 hover:text-almara-gold transition-all"
               >
                 <Linkedin size={18} />
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="w-9 h-9 flex items-center justify-center rounded-full bg-white/5 hover:bg-almara-gold/20 hover:text-almara-gold transition-all"
               >
                 <Instagram size={18} />
-              </a>
+              </a> */}
             </div>
           </div>
 
