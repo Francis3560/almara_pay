@@ -48,7 +48,7 @@ const Contact = () => {
             <div className="lg:col-span-5 space-y-6">
               <ContactInfo
                 icon={Mail}
-                title="OTC Desk Inquiries"
+                title="Enquiries"
                 content="sales@almarapay.com"
                 link="mailto:sales@almarapay.com"
               />
@@ -155,12 +155,10 @@ const Contact = () => {
                     </label>
                     <div className="flex flex-wrap gap-3">
                       {[
-                        "OTC On-Ramp",
-                        "OTC Off-Ramp",
-                        "Treasury Desk",
-                        "Remittance Settlement",
-                        "Compliance/KYB",
-                        "Other",
+                        "Mobile Money Services",
+                        "Card Forex Services",
+                        "Card Igaming Services",
+                        "OTC Services",
                       ].map((tag) => (
                         <button
                           key={tag}

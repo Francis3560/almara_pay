@@ -107,7 +107,7 @@ const Hero = () => {
             <div className="flex items-center gap-2 bg-secondary/30 backdrop-blur-md px-4 py-1.5 rounded-full border border-border">
               <Star className="w-4 h-4 text-almara-gold fill-current" />
               <span className="text-xs font-semibold tracking-wide uppercase">
-                LIVE ACCROSS AFRICA
+                LIVE ACROSS AFRICA
               </span>
             </div>
           </div>
